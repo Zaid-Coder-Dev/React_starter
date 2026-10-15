@@ -1,26 +1,14 @@
+:root {
+  --couleur1: #0f766e;   
+  --couleur2: #14b8a6;   
+  --clair: #ccfbf1;      
+}
+
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, var(--couleur1), var(--couleur2));
   font-family: "Segoe UI", Arial, sans-serif;
-}
-
-
-.entete {
-  background: rgba(0, 0, 0, 0.25);
-  color: white;
-  text-align: center;
-  padding: 25px 20px;
-}
-
-.entete h1 {
-  margin: 0;
-  font-size: 36px;
-}
-
-.entete p {
-  margin: 8px 0 0;
-  opacity: 0.9;
 }
 
 form {
@@ -33,7 +21,7 @@ form {
 }
 
 fieldset {
-  border: 2px solid #e0e3ff;
+  border: 2px solid var(--clair);
   border-radius: 12px;
   margin-bottom: 20px;
   padding: 15px 20px;
@@ -41,7 +29,7 @@ fieldset {
 
 legend {
   font-weight: bold;
-  color: #667eea;
+  color: var(--couleur1);
   padding: 0 10px;
 }
 
@@ -81,8 +69,8 @@ select {
 input:focus,
 select:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+  border-color: var(--couleur1);
+  box-shadow: 0 0 0 3px var(--clair);
 }
 
 fieldset label {
@@ -94,7 +82,7 @@ fieldset label {
 button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, var(--couleur1), var(--couleur2));
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -125,13 +113,29 @@ button:disabled {
   margin: 2px 0 8px;
 }
 
+.entete {
+  text-align: center;
+  color: white;
+  padding: 30px 20px 10px;
+}
+
+.entete h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.entete p {
+  margin: 8px 0 0;
+  opacity: 0.9;
+}
+
 .carte {
   max-width: 650px;
   margin: 0 auto 30px;
   padding: 25px 30px;
   background: white;
   border-radius: 16px;
-  border-left: 8px solid #667eea;
+  border-left: 8px solid var(--couleur1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
@@ -143,7 +147,7 @@ button:disabled {
 .badge {
   display: inline-block;
   padding: 3px 12px;
-  background: #667eea;
+  background: var(--couleur1);
   color: white;
   border-radius: 20px;
   font-weight: bold;
