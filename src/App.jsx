@@ -29,6 +29,11 @@ function App() {
         <ListeTaches/>
       </section>
 
+      <section className="exercice">
+        <h1 className="succes">Exercice 4</h1>
+        <FavoriteMovies/>
+      </section>
+
       
     </div>
   );
