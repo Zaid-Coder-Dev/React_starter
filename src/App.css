@@ -293,3 +293,114 @@ button:hover {
     margin: 20px 10px;
   }
 }
+
+
+/* Main title */
+.app > h1 {
+  text-align: center;
+  font-size: 30px;
+  color: var(--text);
+  padding: 20px;
+  margin-bottom: 30px;
+  background: var(--white);
+  border-radius: 12px;
+  border-bottom: 4px solid var(--green);
+  box-shadow: 0 3px 10px #f8020208;
+}
+
+/* Exercise titles */
+.exercice h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--green);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.exercice h1::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 28px;
+  background: var(--green);
+  border-radius: 5px;
+}
+
+/* Exercise 5 - Favorite Movies */
+.champ-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.champ-container h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--text);
+  font-size: 22px;
+}
+
+/* Movie form */
+.champ-container form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.champ-container input {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+}
+
+.champ-container form button {
+  background: var(--blue);
+}
+
+/* Movie list */
+.champ-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.champ-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* Delete movie button */
+.champ-container li button {
+  flex-shrink: 0;
+  background: var(--red);
+}
+
+.champ-container li button:hover {
+  background: #b91c1c;
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  .app > h1 {
+    font-size: 22px;
+  }
+
+  .champ-container {
+    padding: 14px;
+  }
+
+  .champ-container li {
+    padding: 10px;
+  }
+}

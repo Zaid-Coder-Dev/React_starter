@@ -14,7 +14,7 @@ export default function FavoriteMovies() {
     function ajouter(e) {
         e.preventDefault();
 
-        if (!movieName) return;
+        if (!movieName.trim()) return;
 
         setMovies([...movies, movieName]);
         setMovieName('');
@@ -39,7 +39,7 @@ export default function FavoriteMovies() {
                 <button type="submit">Ajouter</button>
             </form>
 
-            { movies ? <ul>
+            { movies.length>0 ? <ul>
                 {movies.map((movie, index) => (
                     <li key={index}>
                         {movie}
