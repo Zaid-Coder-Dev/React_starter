@@ -1,8 +1,8 @@
-import Page from './Components/Page'
+import Page from './FruitsLegumes/Page'
 import './App.css';
-import Fetch from './testfetch';
-import Axios from './testAxios';
-import Context from './context';
+import Fetch from './ApiTest/testfetch';
+import Axios from './ApiTest/testAxios';
+import Context from './context test/context';
 
 function App() {
   return (
@@ -13,13 +13,22 @@ function App() {
       <Page/>
     </div>
 
-
+    <div>
     <Fetch/>
     <Axios/>
+    </div>
+    <br/>
+    <hr/>
+    <br/>
 
-
-
+    <div>
     <Context/>
+
+    
+    </div>
+
+
+    
     </div>
   );
 }
