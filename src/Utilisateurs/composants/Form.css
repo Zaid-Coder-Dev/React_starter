@@ -1,0 +1,105 @@
+.modifier-container {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.modifier-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.modifier-card h2 {
+  margin: 0 0 8px;
+  color: #1f2937;
+  font-size: 22px;
+}
+
+.modifier-card > p {
+  margin: 0 0 26px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.modifier-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.modifier-field label {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modifier-field input {
+  width: 100%;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.modifier-field input:focus {
+  border-color: #5b4bd9;
+  box-shadow: 0 0 0 3px rgba(91, 75, 217, 0.12);
+}
+
+.modifier-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.modifier-actions button {
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.annuler-btn {
+  background: #ffffff;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+}
+
+.enregistrer-btn {
+  background: #5b4bd9;
+  color: #ffffff;
+  border: 1px solid #5b4bd9;
+}
+
+.enregistrer-btn:hover {
+  background: #4338ca;
+}
+
+@media (max-width: 480px) {
+  .modifier-container {
+    padding: 12px;
+  }
+
+  .modifier-card {
+    padding: 20px;
+  }
+
+  .modifier-actions {
+    flex-direction: column-reverse;
+  }
+
+  .modifier-actions button {
+    width: 100%;
+  }
+}

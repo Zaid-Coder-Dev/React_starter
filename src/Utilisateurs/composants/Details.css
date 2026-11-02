@@ -1,0 +1,25 @@
+.user-details {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.user-details h2 {
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.user-details h3 {
+  margin-top: 25px;
+  color: #5b4bd9;
+}
+
+.user-details p {
+  margin: 12px 0;
+  color: #4b5563;
+  overflow-wrap: anywhere;
+}

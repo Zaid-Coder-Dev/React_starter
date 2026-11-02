@@ -1,0 +1,84 @@
+aside {
+  width: 240px;
+  min-height: 100vh;
+  padding: 24px 16px;
+  background: #1e1b2e;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+aside a {
+  display: block;
+  padding: 13px 16px;
+  border-radius: 8px;
+  color: #b8b5c9;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+aside a:hover {
+  background: #302b45;
+  color: #fff;
+}
+
+aside a.active {
+  background: #5b4bd9;
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  aside {
+    width: 100%;
+    min-height: auto;
+    padding: 12px;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  aside a {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.app-layout aside {
+  width: 240px;
+  flex: 0 0 240px;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 24px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .app-layout aside {
+    width: 100%;
+    flex: none;
+    min-height: auto;
+  }
+
+  .main-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+  }
+}
