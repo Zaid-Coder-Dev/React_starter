@@ -1,35 +1,6 @@
-.app-layout {
-  display: flex;
-  min-height: 100vh;
-}
-
-aside {
-  width: 240px;
-  min-height: 100vh;
-  flex-shrink: 0;
-}
-
-.main-content {
-  flex: 1;
-  padding: 25px;
-  min-width: 0;
-}
-
+.app-layout { display: flex; min-height: 100vh; }
+.main-content { flex: 1; min-width: 0; padding: 28px 32px; }
 @media (max-width: 768px) {
-  aside {
-    width: 100%;
-    min-height: auto;
-    padding: 10px;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 6px;
-    overflow-x: auto;
-  }
-
-  aside a {
-    flex-shrink: 0;
-    padding: 10px 14px;
-    font-size: 13px;
-    white-space: nowrap;
-  }
+  .app-layout { flex-direction: column; }
+  .main-content { padding: 16px; }
 }

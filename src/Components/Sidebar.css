@@ -1,84 +1,41 @@
 aside {
-  width: 240px;
+  width: 250px;
+  flex: 0 0 250px;
   min-height: 100vh;
-  padding: 24px 16px;
-  background: #1e1b2e;
+  padding: 22px 14px;
+  background: #1a1b2e;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  box-sizing: border-box;
-  flex-shrink: 0;
+  gap: 4px;
 }
-
+.brand { display: flex; align-items: center; gap: 12px; padding: 0 8px 18px; color: #fff; }
+.brand-logo {
+  width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center;
+  background: linear-gradient(135deg, #8b7bff, #5b4bd9); font-weight: 700; font-size: 18px;
+}
+.brand strong { display: block; font-size: 15px; }
+.brand small { color: #8b8aa8; font-size: 12px; }
+.nav-title {
+  margin: 16px 10px 6px; color: #6f6e8c; font-size: 11px; font-weight: 700;
+  letter-spacing: 1.2px; text-transform: uppercase;
+}
 aside a {
-  display: block;
-  padding: 13px 16px;
-  border-radius: 8px;
-  color: #b8b5c9;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-  transition: background 0.2s, color 0.2s;
+  display: flex; align-items: center; gap: 12px; padding: 12px 12px; border-radius: 8px;
+  color: #c4c3d8; text-decoration: none; font-size: 15px; transition: background .15s, color .15s;
 }
-
-aside a:hover {
-  background: #302b45;
-  color: #fff;
+aside a:hover { background: #2a2b45; color: #fff; }
+aside a.active { background: #5b4bd9; color: #fff; }
+.icone { width: 18px; text-align: center; color: #8b8aa8; }
+aside a.active .icone { color: #fff; }
+.count {
+  margin-left: auto; min-width: 24px; padding: 2px 7px; border-radius: 20px; text-align: center;
+  background: #34355a; color: #c4c3d8; font-size: 11px; font-weight: 600;
 }
+aside a.active .count { background: rgba(255, 255, 255, .25); color: #fff; }
 
-aside a.active {
-  background: #5b4bd9;
-  color: #fff;
-}
-
-/* Mobile */
 @media (max-width: 768px) {
-  aside {
-    width: 100%;
-    min-height: auto;
-    padding: 12px;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  aside a {
-    padding: 12px 14px;
-    font-size: 14px;
-  }
-}
-
-.app-layout {
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
-}
-
-.app-layout aside {
-  width: 240px;
-  flex: 0 0 240px;
-}
-
-.main-content {
-  flex: 1;
-  min-width: 0;
-  padding: 24px;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .app-layout {
-    flex-direction: column;
-  }
-
-  .app-layout aside {
-    width: 100%;
-    flex: none;
-    min-height: auto;
-  }
-
-  .main-content {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 16px;
-  }
+  aside { width: 100%; flex: none; min-height: auto; flex-direction: row; align-items: center; overflow-x: auto; padding: 10px; }
+  .brand { padding: 0 8px 0 0; }
+  .brand small, .nav-title, .count { display: none; }
+  aside a { flex-shrink: 0; padding: 10px 12px; font-size: 14px; white-space: nowrap; }
 }

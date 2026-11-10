@@ -1,14 +1,13 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
-export default function UseAxios(url) {
-    const [data, setData] = useState([]);
+export default function UseAxios(url, actionType) {
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        axios.get(url).then((response) => {
-            setData(response.data);
-        });
-    }, [url]);
-
-    return [data, setData];
+  useEffect(() => {
+    axios.get(url).then((response) => {
+      dispatch({ type: actionType, payload: response.data });
+    });
+  }, [url, actionType, dispatch]);
 }
